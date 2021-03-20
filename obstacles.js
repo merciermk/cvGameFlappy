@@ -76,12 +76,21 @@ var obstaclesCreator = function(){
 
 
 var collisionTest = function(){
-    obstacles.forEach(() => {
-        if (blackBird.dx >= obstacles.dx - (blackBird.dWidth) && blackBird.dx <= (obstacles.dx + obstacles.dWidth - 20) &&
-        blackBird.dy == obstacles.dy - (blackBird.dheight)
-        ){
+    // obstacles.forEach(() => {
+    //     if (blackBird.dx >= obstacles.dx - (blackBird.dWidth) && blackBird.dx <= (obstacles.dx + obstacles.dWidth - 20) &&
+    //     blackBird.dy == obstacles.dy - (blackBird.dheight)
+    //     ){
+    //     console.log("colision")
+    // }
+    // })
+
+
+    for(i=0; i < obstacles.length;i++){
+        
+        if (blackBird.dx < obstacles[i].dx + obstacles[i].dwidth &&
+            blackBird.dx + blackBird.dwidth > obstacles[i].dx
+            ){
         console.log("colision")
     }
-    
-    })
+}
 }
