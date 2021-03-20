@@ -9,7 +9,7 @@ var gravity = 10;
 var elevation = 5
 var frame = 1
 
-var flyingY = 10;
+var flyingY = 40;
 
 var blackBird = new CharacterFactory(flyingY);
 var backGround1 = new BackGround;
@@ -23,7 +23,7 @@ var animation = function(){
     blackBird.draw(flyingY)
     blackBird.limits(flyingY)
     obstaclesCreator()
-    collisionTest()
+    if(collisionTest()) return
     
     frame++
 

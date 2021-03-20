@@ -1,24 +1,25 @@
 // 200*850
 var obstacleImg =[]
 obstacleImg[0] = new Image()
-obstacleImg[0].src = "./img/obstacles/obstacle1.png"
+obstacleImg[0].src = "./img/obstacles/obstacle0.png"
 
 obstacleImg[1] = new Image()
-obstacleImg[1].src = "./img/obstacles/obstacle2.png"
+obstacleImg[1].src = "./img/obstacles/obstacle1.png"
 
 obstacleImg[2] = new Image()
-obstacleImg[2].src = "./img/obstacles/obstacle1.png"
+obstacleImg[2].src = "./img/obstacles/obstacle2.png"
 
 var ObstacleFactoryUp = function(){
-    this.imgNumber = Math.floor(Math.random()*2)
+    this.imgNumber = Math.floor(Math.random()*3)
+    console.log(this.imgNumber)
     this.sx = 0;
     this.sy = 0;
     this.swidth = 200;
     this.sheight = 850;
-    this.dwidth = this.swidth/4;
-    this.dheight = this.sheight/4;
+    this.dwidth = 50;
+    this.dheight = 212;
     this.dx = 600;
-    this.dy = Math.floor(Math.random()*- this.dheight);
+    this.dy = Math.floor(Math.random()*- this.dheight) - 30;
     
     this.draw = function(){
         ctx.drawImage(obstacleImg[this.imgNumber],this.sx,this.sy,this.swidth,this.sheight,this.dx,this.dy,this.dwidth,this.dheight)
@@ -30,7 +31,7 @@ var ObstacleFactoryUp = function(){
 }
 
 var ObstacleFactoryDown = function(){
-    this.imgNumber = Math.floor(Math.random()*2)
+    this.imgNumber = Math.floor(Math.random()*3)
     this.sx = 0;
     this.sy = 0;
     this.swidth = 200;
@@ -38,7 +39,7 @@ var ObstacleFactoryDown = function(){
     this.dwidth = this.swidth/4;
     this.dheight = this.sheight/4;
     this.dx = 600;
-    this.dy = 400 - Math.floor(Math.random() * this.dheight) + 15;
+    this.dy = 400 - Math.floor(Math.random() * this.dheight) + 30;
  
     this.draw = function(){
         ctx.drawImage(obstacleImg[this.imgNumber],this.sx,this.sy,this.swidth,this.sheight,this.dx,this.dy,this.dwidth,this.dheight)
@@ -49,7 +50,8 @@ var ObstacleFactoryDown = function(){
     }
 }
 
-var obstacles = [];
+var obstaclesTop = []; 
+var obstaclesBottom =[]
 
 var obstaclesCreator = function(){
     //console.log(frame)
@@ -57,18 +59,18 @@ var obstaclesCreator = function(){
         //console.log("in")
         var random = Math.floor(Math.random()*3)
         if(random === 1){
-            obstacles.unshift(new ObstacleFactoryUp)
+            obstaclesTop.unshift(new ObstacleFactoryUp)
         }
         if(random === 2){
-            obstacles.unshift(new ObstacleFactoryDown)
+            obstaclesTop.unshift(new ObstacleFactoryDown)
         }
         if(random === 3){
-            obstacles.unshift(new ObstacleFactoryUp)
-            obstacles.unshift(new ObstacleFactoryDown)
+            obstaclesTop.unshift(new ObstacleFactoryUp)
+            obstaclesTop.unshift(new ObstacleFactoryDown)
         }
     }
-    for(let i = 0; i < obstacles.length; i++) {
-        obstacles[i].frame()
+    for(let i = 0; i < obstaclesTop.length; i++) {
+        obstaclesTop[i].frame()
     }
 
    
@@ -85,12 +87,16 @@ var collisionTest = function(){
     // })
 
 
-    for(i=0; i < obstacles.length;i++){
+    for(i=0; i < obstaclesTop.length;i++){
         
-        if (blackBird.dx < obstacles[i].dx + obstacles[i].dwidth &&
-            blackBird.dx + blackBird.dwidth > obstacles[i].dx
-            ){
-        console.log("colision")
+        if (blackBird.dy > obstaclesTop[i].dy + obstaclesTop[i].dheight
+            || blackBird.dx > obstaclesTop[i].dx + obstaclesTop[i].dwidth
+            || blackBird.dy < obstaclesTop[i].dy - blackBird.dheight 
+            || blackBird.dx < obstaclesTop[i].dx - blackBird.dwidth
+            ) {
+         // Pas de collision
+       }else{
+        return true
     }
 }
 }
