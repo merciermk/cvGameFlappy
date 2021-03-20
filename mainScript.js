@@ -12,15 +12,18 @@ var frame = 1
 var flyingY = 10;
 
 var blackBird = new CharacterFactory(flyingY);
-var obstacle1 = new ObstacleFactory()
+var backGround1 = new BackGround;
+
 
 // Animation area 
 
 var animation = function(){
     ctx.clearRect(0,0, myCanvas.width,myCanvas.height)
+    backGround1.frame()
     blackBird.draw(flyingY)
     blackBird.limits(flyingY)
     obstaclesCreator()
+    
     frame++
 
     requestAnimationFrame(animation)
