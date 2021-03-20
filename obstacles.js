@@ -52,9 +52,9 @@ var ObstacleFactoryDown = function(){
 var obstacles = [];
 
 var obstaclesCreator = function(){
-    console.log(frame)
+    //console.log(frame)
     if(frame%50  === 0){
-        console.log("in")
+        //console.log("in")
         var random = Math.floor(Math.random()*3)
         if(random === 1){
             obstacles.unshift(new ObstacleFactoryUp)
@@ -72,4 +72,16 @@ var obstaclesCreator = function(){
     }
 
    
+}
+
+
+var collisionTest = function(){
+    obstacles.forEach(() => {
+        if (blackBird.dx >= obstacles.dx - (blackBird.dWidth) && blackBird.dx <= (obstacles.dx + obstacles.dWidth - 20) &&
+        blackBird.dy == obstacles.dy - (blackBird.dheight)
+        ){
+        console.log("colision")
+    }
+    
+    })
 }

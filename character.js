@@ -28,7 +28,7 @@ var CharacterFactory = function(dy){
            
             //console.log('in')
         }if(dy <= 0 && keyState[32] == false){
-            gravity = 3
+            gravity = 10
         }
         //console.log(dy)
         //console.log(gravity)

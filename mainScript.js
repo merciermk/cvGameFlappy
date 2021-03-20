@@ -5,8 +5,8 @@ myCanvas.height = 400
 
 var buttonPress = false
 var score = 0;
-var gravity = 3;
-var elevation = 3
+var gravity = 10;
+var elevation = 5
 var frame = 1
 
 var flyingY = 10;
@@ -23,6 +23,7 @@ var animation = function(){
     blackBird.draw(flyingY)
     blackBird.limits(flyingY)
     obstaclesCreator()
+    collisionTest()
     
     frame++
 
