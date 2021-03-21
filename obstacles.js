@@ -16,8 +16,8 @@ var ObstacleFactoryTop = function () {
     this.sy = 0;
     this.swidth = 200;
     this.sheight = 850;
-    this.dwidth = 50;
-    this.dheight = 212;
+    this.dwidth = this.swidth / 4;
+    this.dheight = this.sheight / 4;
     this.dx = 600;
     this.dy = Math.floor(Math.random() * - this.dheight) - 60;
 
@@ -55,7 +55,9 @@ var obstaclesTop = [];
 //chager nom variable obstoclesTop pour obstacles
 var obstaclesCreator = function () {
     //console.log(frame)
-    if (frame % 50 === 0) {
+
+    // j'utilise le modulo pour gerer le nombre d'obstacle fait
+    if (frame % 40 === 0) {
         //console.log("in")
         var random = Math.floor(Math.random() * 3)
         if (random === 1) {
