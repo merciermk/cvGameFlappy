@@ -6,25 +6,25 @@ myCanvas.height = 400
 var buttonPress = false
 var score = 0;
 var gravity = 10;
-var elevation = 5
+var elevation = 6
 var frame = 1
 
 var flyingY = 40;
 
 var blackBird = new CharacterFactory(flyingY);
-var backGround1 = new BackGround;
+
 
 
 // Animation area 
 
-var animation = function(){
-    ctx.clearRect(0,0, myCanvas.width,myCanvas.height)
-    backGround1.frame()
+var animation = function () {
+    ctx.clearRect(0, 0, myCanvas.width, myCanvas.height)
+    backgroundInfinity()
     blackBird.draw(flyingY)
     blackBird.limits(flyingY)
     obstaclesCreator()
-    if(collisionTest()) return
-    
+    if (collisionTest()) return
+
     frame++
 
     requestAnimationFrame(animation)
@@ -44,15 +44,15 @@ window.addEventListener('keyup', function (e) {
     keyState[e.keyCode] = false;
 }, true);
 
-var pressKeyChecker = function(){
+var pressKeyChecker = function () {
     setInterval(() => {
-        if(keyState[32]){
+        if (keyState[32]) {
             buttonPress = true;
             flyingY -= gravity
-        }else{
+        } else {
             buttonPress = false;
             flyingY += gravity
         }
-    },50);
+    }, 50);
 }()
 
