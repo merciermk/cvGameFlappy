@@ -1,7 +1,7 @@
 //1280*400
 
 var bg = new Image();
-bg.src = "./img/background/bg3.jpg"
+bg.src = "./img/background/bg2.jpg"
 
 var groundImg = new Image();
 groundImg.src = "./img/background/front2.png"

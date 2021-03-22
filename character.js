@@ -16,13 +16,10 @@ var CharacterFactory = function () {
     this.draw = function (dy) {
         ctx.drawImage(character, this.sx, this.sy, this.swidth, this.sheight, this.dx, dy, this.dwidth, this.dheight)
         this.dy = dy
+        this.limits(dy)
     }
     this.limits = function (dy) {
-        if (dy + this.dheight >= myCanvas.height) {
-            dy = dy + this.dheight;
-            gravity = 0;
-            //console.log(dy)
-        }
+       
         if (dy <= 0) {
 
             gravity = 0

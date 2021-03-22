@@ -28,16 +28,16 @@ var ground = []
 var animation = function () {
     ctx.clearRect(0, 0, myCanvas.width, myCanvas.height)
     backgroundInfinity()
-    screenScore.draw()
     blackBird.draw(flyingY)
-    blackBird.limits(flyingY)
-   
     obstaclesCreator()
+   
     groundInfinity()
-    if (collisionTest()) return
-
-    frame++
-
+    screenScore.draw()
+    skills.draw()
+    if (collisionTest()){
+        return;
+   }
+    frame++;
     requestAnimationFrame(animation)
 }
 animation()

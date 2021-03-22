@@ -91,14 +91,18 @@ var collisionTest = function () {
 
     for (i = 0; i < obstaclesTop.length; i++) {
 
-        if (blackBird.dy > obstaclesTop[i].dy + obstaclesTop[i].dheight
-            || blackBird.dx > obstaclesTop[i].dx + obstaclesTop[i].dwidth
-            || blackBird.dy < obstaclesTop[i].dy - blackBird.dheight
-            || blackBird.dx < obstaclesTop[i].dx - blackBird.dwidth
-        ) {
-            // Pas de collision
-        } else {
-            return true
+        for (i = 0; i < obstaclesTop.length; i++) {
+
+            if (blackBird.dy > obstaclesTop[i].dy + obstaclesTop[i].dheight && blackBird.dy < 350
+                || blackBird.dx > obstaclesTop[i].dx + obstaclesTop[i].dwidth && blackBird.dy < 350
+                || blackBird.dy < obstaclesTop[i].dy - blackBird.dheight && blackBird.dy < 350
+                || blackBird.dx < obstaclesTop[i].dx - blackBird.dwidth && blackBird.dy < 350
+
+            ) {
+                // Pas de collision
+            } else {
+                return true
+            }
         }
     }
 }
