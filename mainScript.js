@@ -1,4 +1,5 @@
 "use strict"
+
 const myCanvas = document.getElementById("myCanvas")
 const ctx = myCanvas.getContext('2d')
 myCanvas.width = 600
@@ -40,7 +41,9 @@ var animation = function () {
     frame++;
     requestAnimationFrame(animation)
 }
-animation()
 
+addEventListener('load', ()=>{
+    animation()
+})
 
 
