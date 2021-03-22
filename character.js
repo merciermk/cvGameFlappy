@@ -1,4 +1,7 @@
+"use strict"
+
 //void ctx.drawImage(image, sx, sy, sLargeur, sHauteur, dx, dy, dLargeur, dHauteur);
+
 
 var character = new Image()
 character.src = './img/character/character.png'
@@ -13,6 +16,7 @@ var CharacterFactory = function () {
     this.dy = 30;
     this.dwidth = 50;
     this.dheight = 43;
+    this.sprite = 
     this.draw = function (dy) {
         ctx.drawImage(character, this.sx, this.sy, this.swidth, this.sheight, this.dx, dy, this.dwidth, this.dheight)
         this.dy = dy

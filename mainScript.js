@@ -1,5 +1,6 @@
-var myCanvas = document.getElementById("myCanvas")
-var ctx = myCanvas.getContext('2d')
+"use strict"
+const myCanvas = document.getElementById("myCanvas")
+const ctx = myCanvas.getContext('2d')
 myCanvas.width = 600
 myCanvas.height = 400
 
@@ -30,7 +31,6 @@ var animation = function () {
     backgroundInfinity()
     blackBird.draw(flyingY)
     obstaclesCreator()
-   
     groundInfinity()
     screenScore.draw()
     skills.draw()

@@ -1,10 +1,12 @@
+"use strict"
+
 //1280*400
 
 var bg = new Image();
 bg.src = "./img/background/bg2.jpg"
 
 var groundImg = new Image();
-groundImg.src = "./img/background/front2.png"
+groundImg.src = "./img/background/front4.png"
 
 
 var BackGround = function () {
@@ -32,11 +34,11 @@ var Ground = function () {
     this.sx = 0;
     this.sy = 0;
     this.swidth = 1280;
-    this.sheight = 150;
-    this.dwidth = 1280
-    this.dheight = 150
+    this.sheight = 400;
+    this.dwidth = 1280;
+    this.dheight = 400
     this.dx = 0;
-    this.dy = 250;
+    this.dy = 0;
 
     this.draw = function () {
         ctx.drawImage(groundImg, this.sx, this.sy, this.swidth, this.sheight, this.dx, this.dy, this.dwidth, this.dheight)
@@ -62,7 +64,7 @@ var backgroundInfinity = function(){
         background[countbg] = new BackGround
         // je donne les coord de l'ancien background au nouveau
         background[countbg].dx = background[countbg-1].dx + background[countbg-1].dwidth;
-        console.log(i)
+       
     }
 
     for(let y = 0; y < background.length ; y++){

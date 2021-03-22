@@ -1,3 +1,5 @@
+"use strict"
+
 // keyboard
 
 var keyState = {};

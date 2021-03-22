@@ -1,3 +1,4 @@
+"use strict"
 // 200*850
 var obstacleImg = []
 obstacleImg[0] = new Image()
@@ -89,7 +90,7 @@ var collisionTest = function () {
     // })
 
 
-    for (i = 0; i < obstaclesTop.length; i++) {
+    for (let i = 0; i < obstaclesTop.length; i++) {
 
         for (i = 0; i < obstaclesTop.length; i++) {
 

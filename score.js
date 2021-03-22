@@ -1,3 +1,4 @@
+"use strict"
 // ctx.fillText(texte, x, y [, largeurMax]);
 // score et affichage
 
@@ -23,7 +24,6 @@ var screenScore = {
 
 // Création de l'affichage des Skills en fonction de frame, toutes les 1000 frames , tous les 100 points, un skill va apparaitre en bas
 let skillsCount = 0;
-
 var skills = {
     dx: 20,
     dy: 395,
