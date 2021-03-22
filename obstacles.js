@@ -19,7 +19,7 @@ var ObstacleFactoryTop = function () {
     this.dwidth = this.swidth / 4;
     this.dheight = this.sheight / 4;
     this.dx = 600;
-    this.dy = Math.floor(Math.random() * - this.dheight) - 60;
+    this.dy = Math.floor(Math.random() * - this.dheight) - 80;
 
     this.draw = function () {
         ctx.drawImage(obstacleImg[this.imgNumber], this.sx, this.sy, this.swidth, this.sheight, this.dx, this.dy, this.dwidth, this.dheight)
@@ -39,7 +39,7 @@ var ObstacleFactoryBottom = function () {
     this.dwidth = this.swidth / 4;
     this.dheight = this.sheight / 4;
     this.dx = 600;
-    this.dy = 400 - Math.floor(Math.random() * this.dheight) + 60;
+    this.dy = 400 - Math.floor(Math.random() * this.dheight) + 80;
 
     this.draw = function () {
         ctx.drawImage(obstacleImg[this.imgNumber], this.sx, this.sy, this.swidth, this.sheight, this.dx, this.dy, this.dwidth, this.dheight)
