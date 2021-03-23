@@ -38,6 +38,8 @@ var animation = function () {
     if (collisionTest()){
         return;
    }
+   
+    console.log(keyState)
     frame++;
     requestAnimationFrame(animation)
 }
@@ -46,4 +48,4 @@ addEventListener('load', ()=>{
     animation()
 })
 
-
+console.log(keyState)

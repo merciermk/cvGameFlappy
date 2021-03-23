@@ -27,12 +27,12 @@ var sprite = function(){
 var CharacterFactory = function () {
     this.sx = 0;
     this.sy = 0;
-    this.swidth = character[spriteCount].width;
-    this.sheight = character[spriteCount].height;
+    this.swidth = 200;
+    this.sheight = 168;
     this.dx = 100;
     this.dy = 30;
-    this.dwidth = character[spriteCount].width /15;
-    this.dheight = character[spriteCount].height/15;
+    this.dwidth = 50;
+    this.dheight = 50;
   
     this.draw = function (dy) {
         ctx.drawImage(character[spriteCount], this.sx, this.sy, this.swidth, this.sheight, this.dx, dy, this.dwidth, this.dheight)

@@ -21,5 +21,7 @@ var pressKeyChecker = function () {
             buttonPress = false;
             flyingY += gravity
         }
+
+       
     }, 50);
 }()
