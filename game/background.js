@@ -44,7 +44,7 @@ var Ground = function () {
         ctx.drawImage(groundImg, this.sx, this.sy, this.swidth, this.sheight, this.dx, this.dy, this.dwidth, this.dheight)
     }
     this.frame = () => {
-        this.dx -= 1.2;
+        this.dx -= 2;
         this.draw()
     }
 }

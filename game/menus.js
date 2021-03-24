@@ -33,6 +33,7 @@ var gameRestart = function () {
     elevation = 6
     frame = 1
     flyingY = 40;
+    skillsCount = 0
     if (menuStart) {
         delete menuStart.draw(startImg)
     }
@@ -68,7 +69,7 @@ menuScore.drawScore = function(image){
 
     }else{
     ctx.fillText('Votre score est de ' + score , 300, 200);
-    ctx.fillText('Vous avez ' + (skillsCount+1) + ' skills sur 5' , 300, 230);
+    ctx.fillText('Vous avez ' + Math.floor(score/100) + ' skills sur 5' , 300, 230);
     ctx.fillText('On recommence?' , 300, 270);
 
     }

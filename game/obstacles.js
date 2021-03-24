@@ -28,7 +28,7 @@ var ObstacleFactoryTop = function () {
         ctx.drawImage(obstacleImg[this.imgNumber], this.sx, this.sy, this.swidth, this.sheight, this.dx, this.dy, this.dwidth, this.dheight)
     }
     this.frame = () => {
-        this.dx -= 1;
+        this.dx -= 1.5;
         this.draw()
     }
 }
@@ -48,7 +48,7 @@ var ObstacleFactoryBottom = function () {
         ctx.drawImage(obstacleImg[this.imgNumber], this.sx, this.sy, this.swidth, this.sheight, this.dx, this.dy, this.dwidth, this.dheight)
     }
     this.frame = () => {
-        this.dx -= 1;
+        this.dx -= 1.5;
         this.draw()
     }
 }
@@ -88,9 +88,9 @@ var collisionTest = function () {
     for (let i = 0; i < obstacles.length; i++) {
 
         for (i = 0; i < obstacles.length; i++) {
-            // 350 est la hauteur que je voulais pour que la mouche passe dans l'herbe
-            if (blackBird.dy > obstacles[i].dy + obstacles[i].dheight && blackBird.dy < 350
-                || blackBird.dx > obstacles[i].dx + obstacles[i].dwidth && blackBird.dy < 350
+            // 350 est la hauteur que je voulais pour que la mouche passe dans l'herbe / Le 8 est la pour gérer les ailes du sprite qui touchait trop vite les éléments
+            if (blackBird.dy + 8 > obstacles[i].dy + obstacles[i].dheight && blackBird.dy < 350
+                || blackBird.dx  > obstacles[i].dx + obstacles[i].dwidth && blackBird.dy < 350
                 || blackBird.dy < obstacles[i].dy - blackBird.dheight && blackBird.dy < 350
                 || blackBird.dx < obstacles[i].dx - blackBird.dwidth && blackBird.dy < 350
 
