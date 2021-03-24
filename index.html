@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <!-- Meta obligatoires pour Bootstrap -->
+   
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  
 
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -18,13 +16,14 @@
   <body>
     <header>
       <h1>The Fly Game</h1>
-     <a href="./index.html"><p>Mon Jeu</p></a>
-     <a href="./pdf/cvMikeMercierDevJS.pdf"><p>voir mon cv</p></a>
-     <a href="./pdf/cvMikeMercierDevJS.pdf" download="cvMikeMercierDevJS.pdf"><p>Télécharger mon CV</p></a>
-   
+      <a href="./index.html"><p>Mon Jeu</p></a>
+      <a href="./pdf/cvMikeMercierDevJS.pdf"><p>voir mon cv</p></a>
+      <a href="./pdf/cvMikeMercierDevJS.pdf" download="cvMikeMercierDevJS.pdf"
+        ><p>Télécharger mon CV</p></a
+      >
     </header>
-     <div class="main">
-       <div class="competences"></div>
+    <div class="main">
+      <div class="competences"></div>
       <div class="theGame">
         <img
           class="playBtn"
@@ -34,14 +33,14 @@
         <canvas id="myCanvas"> </canvas>
       </div>
     </div>
-   
+    <script src="./game/character.js"></script>
+    <script src="./game/keyboard.js"></script>
+    <script src="./game/background.js"></script>
+    <script src="./game/obstacles.js"></script>
+    <script src="./game/score.js"></script>
+    <script src="./game/menus.js"></script>
+    <script src="./game/mainScript.js"></script>
   </body>
- 
-  <script src="./game/character.js"></script>
-  <script src="./game/keyboard.js"></script>
-  <script src="./game/background.js"></script>
-  <script src="./game/obstacles.js"></script>
-  <script src="./game/score.js"></script>
-  <script src="./game/menus.js"></script>
-  <script src="./game/mainScript.js"></script>
+
+
 </html>
