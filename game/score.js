@@ -39,6 +39,7 @@ var skills = {
         if(score >= 100){
         ctx.font = this.font
         ctx.fillText(this.skillsArr[skillsCount][0], this.dx, this.dy)
+        ctx.textAlign = 'left'
         ctx.fillStyle = "#ffffff"
         if(frame%1000 == 0 && score != 100 && skillsCount < this.skillsArr.length -1 ){
 

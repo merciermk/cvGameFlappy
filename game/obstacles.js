@@ -13,7 +13,7 @@ obstacleImg[2].src = "./game/img/obstacles/obstacle2.png"
 
 
 var ObstacleFactoryTop = function () {
-    this.imgNumber = Math.floor(Math.random() * 3)
+    this.imgNumber = Math.floor(Math.random() * 3) // random de l'image affichée
     console.log(this.imgNumber)
     this.sx = 0;
     this.sy = 0;
@@ -90,7 +90,7 @@ var collisionTest = function () {
         for (i = 0; i < obstacles.length; i++) {
             // 350 est la hauteur que je voulais pour que la mouche passe dans l'herbe / Le 8 est la pour gérer les ailes du sprite qui touchait trop vite les éléments
             if (blackBird.dy + 8 > obstacles[i].dy + obstacles[i].dheight && blackBird.dy < 350
-                || blackBird.dx  > obstacles[i].dx + obstacles[i].dwidth && blackBird.dy < 350
+                || blackBird.dx > obstacles[i].dx + obstacles[i].dwidth && blackBird.dy < 350
                 || blackBird.dy < obstacles[i].dy - blackBird.dheight && blackBird.dy < 350
                 || blackBird.dx < obstacles[i].dx - blackBird.dwidth && blackBird.dy < 350
 

@@ -51,44 +51,44 @@ var Ground = function () {
 
 //fonction pour rajouter le background au fur et a mesure de l'avancement du character.
 
-var backgroundInfinity = function(){
-    
+var backgroundInfinity = function () {
+
     //init du premier background
-    if(!background[0]){
+    if (!background[0]) {
         background[0] = new BackGround
     }
 
     // ajout d'un background quand le premier est deja passé de 600px
-    if(background[countbg].dx < -600){
+    if (background[countbg].dx < -600) {
         countbg++
         background[countbg] = new BackGround
         // je donne les coord de l'ancien background au nouveau
-        background[countbg].dx = background[countbg-1].dx + background[countbg-1].dwidth;
-       
+        background[countbg].dx = background[countbg - 1].dx + background[countbg - 1].dwidth;
+
     }
 
-    for(let y = 0; y < background.length ; y++){
+    for (let y = 0; y < background.length; y++) {
         background[y].frame()
     }
 }
 
-var groundInfinity = function(){
-    
+var groundInfinity = function () {
+
     //init du premier ground
-    if(!ground[0]){
+    if (!ground[0]) {
         ground[0] = new Ground
     }
 
     // ajout d'un ground quand le premier est deja passé de 600px
-    if(ground[countGround].dx < -600){
+    if (ground[countGround].dx < -600) {
         countGround++
         ground[countGround] = new Ground
         // je donne les coord de l'ancien ground au nouveau
-        ground[countGround].dx = ground[countGround-1].dx - 2 + ground[countGround-1].dwidth;
-       
+        ground[countGround].dx = ground[countGround - 1].dx - 2 + ground[countGround - 1].dwidth;
+
     }
 
-    for(let x = 0; x < ground.length ; x++){
+    for (let x = 0; x < ground.length; x++) {
         ground[x].frame()
     }
 }

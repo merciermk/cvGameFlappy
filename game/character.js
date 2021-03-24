@@ -18,7 +18,7 @@ var sprite = function () {
         } else {
             spriteCount = 0;
         }
-    }, 100);
+    }, 70);
 
 
 
@@ -44,7 +44,7 @@ var CharacterFactory = function () {
 
         if (dy <= 0 && keyState[32] == true ||
             dy <= 0 && keyState[38] == true ||
-            dy <= 0 && keyState[90] == true ){
+            dy <= 0 && keyState[90] == true) {
 
             gravity = 0
 
