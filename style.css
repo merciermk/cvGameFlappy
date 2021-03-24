@@ -3,25 +3,38 @@ body{
     padding: 0;
     font-family: 'Syne Mono';
     font-size: 20px;
+    color: cornsilk;
+    background-color: #242423;
+    min-width: 600px;
+    min-height: 500px;
+}
+header{
+    background-color: #e4aa64;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+header p{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+h1{
+    display: inline;
+    color: brown;
 }
 
-
+.main{
+    margin-top: 30px;
+}
 #myCanvas{
+   
     width: 600px;
     height: 400px;
     border: 1px solid black
 }
 
-h1{
-    color: brown;
-}
-
-.left{
-    background-color:chocolate
-}
-.right{
-    background-color:chocolate
-}
 
 .theGame{
   

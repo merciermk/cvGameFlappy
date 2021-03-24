@@ -26,35 +26,24 @@ var ground = []
 
 
 // Animation area 
-
 var animation = function () {
     ctx.clearRect(0, 0, myCanvas.width, myCanvas.height)
-   
+
     backgroundInfinity()
     blackBird.draw(flyingY)
     obstaclesCreator()
     groundInfinity()
     screenScore.draw()
     skills.draw()
-    
-    if (collisionTest()){
+    if (collisionTest()) {
+        crashScore(scoreImg)
         return;
-   }
-   
-    console.log(keyState)
+    }
     frame++;
     requestAnimationFrame(animation)
 }
 
 
-window.onload = ()=> {menuStart.draw()}
-menuStart.draw()
-playBtn.onclick = () => {
-    console.log("click")
-    delete menuStart.draw()
-   gameRestart()
-    animation()
-    
-}
 
-console.log(keyState)
+
+
