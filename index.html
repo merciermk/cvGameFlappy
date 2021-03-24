@@ -1,25 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
-    <title>Little Big Game</title>
-</head>
-<body>
-    <h1>FlappyBird Like</h1>
-    <canvas id="myCanvas">
-        <p>My Canvas</p>
-    </canvas>
-</body>
-<script src="./character.js"></script>
-<script src="./keyboard.js"></script>
-<script src="./background.js"></script>
+<html lang="fr">
+  <head>
+    <!-- Meta obligatoires pour Bootstrap -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<script src="./obstacles.js"></script>
-<script src="./score.js"></script>
-<script src="./mainScript.js"></script>
+  
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <title>Little Big Game</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    
+     
+      <div class="theGame">
+        <img
+          class="playBtn"
+          src="./game/img/menu/playBtn.png"
+          alt="boutton demarrage jeu"
+        />
+        <canvas id="myCanvas"> </canvas>
+      </div>
+     
+    </div>
+  </body>
+ 
+  <script src="./game/character.js"></script>
+  <script src="./game/keyboard.js"></script>
+  <script src="./game/background.js"></script>
+
+  <script src="./game/obstacles.js"></script>
+  <script src="./game/score.js"></script>
+  <script src="./game/menus.js"></script>
+  <script src="./game/mainScript.js"></script>
 </html>
