@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Syne Mono";
+  font-size: 20px;
+  color: rgb(253, 251, 251);
+  min-width: 600px;
+  min-height: 500px;
+}
+header {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+header>a:link, header>a {
+  margin-left: 50px;
+  margin-right: 50px;
+  color:black;
+  text-decoration: none;
+}
+h1 {
+  display: inline;
+  color: brown;
+}
+
+#myCanvas {
+  width: 600px;
+  height: 400px;
+  border: 1px solid black;
+}
+
+.theGame {
+    min-width: 650px;
+  align-content: center;
+  text-align: center;
+}
+
+.playBtn {
+  width: 100px;
+  height: 60px;
+  position: absolute;
+  margin-left: 260px;
+  margin-top: 280px;
+}
+
+
+.competences{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items:center;
+    justify-content: center;
+}
+
+svg{
+    width: 80px;
+    height: 80px;
+    color:grey;
+}
+
+.competences_svg{
+    display: none;
+}
+
