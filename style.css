@@ -1,52 +1,50 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Syne Mono';
-    font-size: 20px;
-    color: cornsilk;
-    background-color: #242423;
-    min-width: 600px;
-    min-height: 500px;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Syne Mono";
+  font-size: 20px;
+  color: rgb(253, 251, 251);
+ 
+
+  min-width: 600px;
+  min-height: 500px;
 }
-header{
-    background-color: #e4aa64;
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
+header {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
-header p{
-    margin-left: 50px;
-    margin-right: 50px;
+header>a:link, header>a {
+  margin-left: 50px;
+  margin-right: 50px;
+  color:black;
+  text-decoration: none;
 }
-h1{
-    display: inline;
-    color: brown;
+h1 {
+  display: inline;
+  color: brown;
 }
 
-.main{
-    margin-top: 30px;
+.main {
+  margin-top: 30px;
 }
-#myCanvas{
-   
-    width: 600px;
-    height: 400px;
-    border: 1px solid black
-}
-
-
-.theGame{
-  
-    align-content: center;
-    text-align: center;
+#myCanvas {
+  width: 600px;
+  height: 400px;
+  border: 1px solid black;
 }
 
-.playBtn{
-    width: 100px;
-    height: 60px;
-    position: absolute;
-    margin-left: 260px;
-    margin-top: 280px;
+.theGame {
+  align-content: center;
+  text-align: center;
 }
 
+.playBtn {
+  width: 100px;
+  height: 60px;
+  position: absolute;
+  margin-left: 260px;
+  margin-top: 280px;
+}

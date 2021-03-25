@@ -76,5 +76,4 @@ menuScore.drawScore = function (image) {
 var crashScore = function () {
     menuScore.drawScore(scoreImg)
     playBtn.style.display = 'inline';
-
 }
