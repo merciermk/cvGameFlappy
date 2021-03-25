@@ -4,8 +4,6 @@ body {
   font-family: "Syne Mono";
   font-size: 20px;
   color: rgb(253, 251, 251);
- 
-
   min-width: 600px;
   min-height: 500px;
 }
@@ -27,9 +25,6 @@ h1 {
   color: brown;
 }
 
-.main {
-  margin-top: 30px;
-}
 #myCanvas {
   width: 600px;
   height: 400px;
@@ -37,6 +32,7 @@ h1 {
 }
 
 .theGame {
+    min-width: 650px;
   align-content: center;
   text-align: center;
 }
@@ -48,3 +44,22 @@ h1 {
   margin-left: 260px;
   margin-top: 280px;
 }
+
+
+.competences{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items:center;
+    justify-content: center;
+}
+
+svg{
+    width: 80px;
+    height: 80px;
+    color:grey;
+}
+
+.competences_svg{
+    display: none;
+}
+

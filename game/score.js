@@ -23,6 +23,7 @@ var screenScore = {
 }
 
 // Création de l'affichage des Skills en fonction de frame, toutes les 1000 frames , tous les 100 points, un skill va apparaitre en bas
+let competences = document.querySelectorAll('svg')
 let skillsCount = 0;
 var skills = {
     dx: 20,
@@ -33,7 +34,7 @@ var skills = {
         ['HTML CSS'],
         ['HTML CSS JavaScript'],
         ['HTML CSS JavaScript Angular'],
-        ['HTML CSS JavaScript Angular TypeScript'],
+        ['HTML CSS JavaScript Angular NodeJS'],
     ],
     draw: function(){
         if(score >= 100){
@@ -41,11 +42,14 @@ var skills = {
         ctx.fillText(this.skillsArr[skillsCount][0], this.dx, this.dy)
         ctx.textAlign = 'left'
         ctx.fillStyle = "#ffffff"
+        competences[skillsCount].style.display = 'block';
         if(frame%1000 == 0 && score != 100 && skillsCount < this.skillsArr.length -1 ){
-
+            competences[skillsCount].style.display = 'block';
             skillsCount++;
             console.log(skillsCount)
         };
     };
     },
 };
+
+
