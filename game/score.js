@@ -22,7 +22,7 @@ var screenScore = {
     },
 }
 
-// Création de l'affichage des Skills en fonction de frame, toutes les 1000 frames , tous les 100 points, un skill va apparaitre en bas
+// Création de l'affichage des Skills en fonction de frame, toutes les 1000 frames (tous les 100 points), un skill va apparaitre en bas
 let competences = document.querySelectorAll('svg')
 let skillsCount = 0;
 var skills = {

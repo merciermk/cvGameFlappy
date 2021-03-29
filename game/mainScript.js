@@ -43,9 +43,8 @@ var animation = function () {
     requestAnimationFrame(animation)
 }
 
-
-
-
+// Lancement du menu de départ
 addEventListener('load',()=>{
     console.log("%cReady For Flight", "color: red; font-family: Syne Mono; font-size: 20px; font-weight: bolder; text-shadow: #000 1px 1px;");
+    menuStart.draw(startImg)
 })

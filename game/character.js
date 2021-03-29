@@ -8,9 +8,8 @@ for (let i = 0; i <= 9; i++) {
     character[i] = new Image()
     character[i].src = './game/img/character/frame-' + i + '.png'
 }
-// var character = new Image()
-// character.src = './game/img/character/character.png'
 
+// compteur pour l'animation du blackBird
 var sprite = function () {
     setInterval(() => {
         if (spriteCount < 9) {
@@ -19,11 +18,10 @@ var sprite = function () {
             spriteCount = 0;
         }
     }, 70);
-
-
-
 }()
 
+
+// création de l'element principal
 var CharacterFactory = function () {
     this.sx = 0;
     this.sy = 0;
@@ -40,21 +38,15 @@ var CharacterFactory = function () {
         this.limits(dy)
 
     }
+    // Limite de la bordure du haut
     this.limits = function (dy) {
 
         if (dy <= 0 && keyState[32] == true ||
             dy <= 0 && keyState[38] == true ||
             dy <= 0 && keyState[90] == true) {
-
             gravity = 0
-
-            //console.log('in')
         } else {
             gravity = 10
         }
-        //console.log(dy)
-        //console.log(gravity)
     }
 }
-
-

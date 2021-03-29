@@ -2,6 +2,7 @@
 
 //1280*400
 
+
 var bg = new Image();
 bg.src = "./game/img/background/bg2.png"
 
@@ -15,6 +16,7 @@ var BackGround = function () {
     this.sy = 0;
     this.swidth = 1280;
     this.sheight = 400;
+
     this.dwidth = 1280
     this.dheight = 400
     this.dx = 0;
@@ -35,6 +37,7 @@ var Ground = function () {
     this.sy = 0;
     this.swidth = 1280;
     this.sheight = 400;
+
     this.dwidth = 1280;
     this.dheight = 400
     this.dx = 0;
@@ -49,7 +52,7 @@ var Ground = function () {
     }
 }
 
-//fonction pour rajouter le background au fur et a mesure de l'avancement du character.
+//fonction pour rajouter le background au fur et à mesure de l'avancement du character.
 
 var backgroundInfinity = function () {
 
@@ -64,7 +67,6 @@ var backgroundInfinity = function () {
         background[countbg] = new BackGround
         // je donne les coord de l'ancien background au nouveau
         background[countbg].dx = background[countbg - 1].dx + background[countbg - 1].dwidth;
-
     }
 
     for (let y = 0; y < background.length; y++) {
@@ -72,6 +74,7 @@ var backgroundInfinity = function () {
     }
 }
 
+// ajout à la suite du background
 var groundInfinity = function () {
 
     //init du premier ground
@@ -85,7 +88,6 @@ var groundInfinity = function () {
         ground[countGround] = new Ground
         // je donne les coord de l'ancien ground au nouveau
         ground[countGround].dx = ground[countGround - 1].dx - 2 + ground[countGround - 1].dwidth;
-
     }
 
     for (let x = 0; x < ground.length; x++) {

@@ -1,6 +1,5 @@
 //Gestion des menus de fin et de début
 
-//var startImg = document.querySelector('.start')
 var playBtn = document.querySelector('.playBtn') //Bouton play pour les menus
 
 var startImg = new Image
@@ -40,15 +39,12 @@ var gameRestart = function () {
     playBtn.style.display = 'none';
 }
 
-window.onload = () => { menuStart.draw(startImg) }
-
+// Appel de play btn
 playBtn.onclick = () => {
-    console.log("click")
 
     gameRestart()
     animation()
 }
-
 
 
 // Menu Score

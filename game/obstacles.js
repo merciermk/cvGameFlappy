@@ -1,6 +1,6 @@
 "use strict"
 
-// Mes obstacles
+// Images des obstacles
 var obstacleImg = []
 obstacleImg[0] = new Image()
 obstacleImg[0].src = "./game/img/obstacles/obstacle0.png"
@@ -11,7 +11,7 @@ obstacleImg[1].src = "./game/img/obstacles/obstacle1.png"
 obstacleImg[2] = new Image()
 obstacleImg[2].src = "./game/img/obstacles/obstacle2.png"
 
-
+// constructeur objstacle top
 var ObstacleFactoryTop = function () {
     this.imgNumber = Math.floor(Math.random() * 3) // random de l'image affichée
     console.log(this.imgNumber)
@@ -33,6 +33,7 @@ var ObstacleFactoryTop = function () {
     }
 }
 
+//Constructeur obstacles bottom
 var ObstacleFactoryBottom = function () {
     this.imgNumber = Math.floor(Math.random() * 3)
     this.sx = 0;
@@ -48,7 +49,7 @@ var ObstacleFactoryBottom = function () {
         ctx.drawImage(obstacleImg[this.imgNumber], this.sx, this.sy, this.swidth, this.sheight, this.dx, this.dy, this.dwidth, this.dheight)
     }
     this.frame = () => {
-        this.dx -= 1.5;
+        this.dx -= 1.5; // vitesse de deplacement des éléments
         this.draw()
     }
 }
@@ -57,9 +58,8 @@ var obstacles = [];
 
 // Création des obstacles au fur et a mesure en randomisant la forme et la taille
 var obstaclesCreator = function () {
-    //console.log(frame)
 
-    // j'utilise le modulo pour gerer le nombre d'obstacle fait
+    // j'utilise le modulo pour gerer le nombre d'obstacles
     if (frame % 40 === 0) {
         //console.log("in")
         let random = Math.floor(Math.random() * 3)
@@ -75,10 +75,12 @@ var obstaclesCreator = function () {
         }
     }
     for (let i = 0; i < obstacles.length; i++) {
-        obstacles[i].frame()                                //J'avance de 1px tous les elements
+        obstacles[i].frame() 
     }
-
-
+    // controle de la taille de l'array
+    if(obstacles.length > 30){
+        obstacles.pop();
+    }
 }
 
 
