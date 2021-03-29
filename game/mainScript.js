@@ -5,10 +5,6 @@ const ctx = myCanvas.getContext('2d')
 myCanvas.width = 600
 myCanvas.height = 400
 
-// Keyboard
-var buttonPress = false
-
-
 var score = 0;
 var gravity = 10;
 var elevation = 6

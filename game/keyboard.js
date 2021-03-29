@@ -1,5 +1,8 @@
 "use strict"
 
+// Keyboard
+var buttonPress = false;
+
 // Gestion des touches clavier
 var keyState = {};
 window.addEventListener('keydown', function (e) {
