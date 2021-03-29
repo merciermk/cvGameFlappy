@@ -1,8 +1,5 @@
 "use strict"
 
-//1280*400
-
-
 var bg = new Image();
 bg.src = "./game/img/background/bg2.png"
 
@@ -66,7 +63,7 @@ var backgroundInfinity = function () {
         countbg++
         background[countbg] = new BackGround
         // je donne les coord de l'ancien background au nouveau
-        background[countbg].dx = background[countbg - 1].dx + background[countbg - 1].dwidth;
+        background[countbg].dx = background[countbg - 1].dx + background[countbg - 1].dwidth - 1;
     }
 
     for (let y = 0; y < background.length; y++) {

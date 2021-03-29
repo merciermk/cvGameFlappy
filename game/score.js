@@ -1,5 +1,5 @@
 "use strict"
-// ctx.fillText(texte, x, y [, largeurMax]);
+
 // score et affichage
 
 // creation du score et mise en forme

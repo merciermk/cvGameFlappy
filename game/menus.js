@@ -1,3 +1,4 @@
+"use strict"
 //Gestion des menus de fin et de début
 
 var playBtn = document.querySelector('.playBtn') //Bouton play pour les menus
@@ -46,12 +47,11 @@ playBtn.onclick = () => {
     animation()
 }
 
-
 // Menu Score
 
 //affichage du score
 
-menuScore = new Object(menuStart);
+let menuScore = new Object(menuStart);
 menuScore.drawScore = function (image) {
     ctx.clearRect(0,0,myCanvas.width,myCanvas.height)
     ctx.drawImage(image, this.dx, this.dy, this.width, this.height);
